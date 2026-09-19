@@ -41,8 +41,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/blog`, priority: 0.8, changeFrequency: 'weekly' as const },
     { url: `${baseUrl}/blog/guide-vendre-diamants-strasbourg`, priority: 0.75, changeFrequency: 'monthly' as const },
     { url: `${baseUrl}/blog/comprendre-les-4c-du-diamant-strasbourg`, priority: 0.75, changeFrequency: 'monthly' as const },
-    { url: `${baseUrl}/blog/certificats-gia-vs-hrd-strasbourg`, priority: 0.75, changeFrequency: 'monthly' as const },
-    { url: `${baseUrl}/blog/vendre-montre-luxe-rolex-patek-strasbourg`, priority: 0.75, changeFrequency: 'monthly' as const },
+    { url: `${baseUrl}/blog/certificats-gia-vs-hrd-ssef-strasbourg`, priority: 0.75, changeFrequency: 'monthly' as const },
+    { url: `${baseUrl}/blog/vendre-montre-luxe-rolex-patek-richard-mille-strasbourg`, priority: 0.75, changeFrequency: 'monthly' as const },
     { url: `${baseUrl}/blog/valeur-haute-joaillerie-signee-cartier-van-cleef-strasbourg`, priority: 0.75, changeFrequency: 'monthly' as const },
     { url: `${baseUrl}/blog/fiscalite-or-lingots-pieces-france`, priority: 0.75, changeFrequency: 'monthly' as const },
   ];

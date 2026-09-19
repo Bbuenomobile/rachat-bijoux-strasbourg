@@ -10,11 +10,11 @@ import { site } from '@/lib/site';
 export const metadata: Metadata = {
   title: "Guide Gemmologique Strasbourg | " + site.name,
   description: "Article technique et informatif rédigé par les gemmologues diplômés de Rachat Bijoux Strasbourg.",
-  alternates: { canonical: `${site.url}/blog/fiscalite-or-lingots-pieces-france` },
+  alternates: { canonical: `${site.url}/blog/certificats-gia-vs-hrd-ssef-strasbourg` },
 };
 
 export default function BlogPostPage() {
-  const post = blogPosts.find((p) => p.slug === 'fiscalite-or-lingots-pieces-france');
+  const post = blogPosts.find((p) => p.slug === 'certificats-gia-vs-hrd-ssef-strasbourg');
   if (!post) return notFound();
 
   const articleJsonLd = {
@@ -30,7 +30,7 @@ export default function BlogPostPage() {
       name: site.name,
       logo: { '@type': 'ImageObject', url: `${site.url}/icon.png` },
     },
-    mainEntityOfPage: `${site.url}/blog/fiscalite-or-lingots-pieces-france`,
+    mainEntityOfPage: `${site.url}/blog/certificats-gia-vs-hrd-ssef-strasbourg`,
   };
 
   return (
@@ -86,7 +86,7 @@ export default function BlogPostPage() {
             <ContactForm
               headline="Conseil Gemmologique Personnalisé à Strasbourg"
               intro="Vous souhaitez connaître la valeur précise d'une gemme ou d'un bijou en votre possession ? Contactez nos gemmologues à 1850."
-              source="blog:fiscalite-or-lingots-pieces-france"
+              source="blog:certificats-gia-vs-hrd-ssef-strasbourg"
             />
           </div>
         </div>

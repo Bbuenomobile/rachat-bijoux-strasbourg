@@ -2,29 +2,49 @@ import { ServicePage } from '@/components/service-page';
 import { site } from '@/lib/site';
 
 export const metadata = {
-  title: "Rachat Diamant Strasbourg | Diamants Certifiés GIA & HRD au Cours Rapaport",
-  description: "Cabinet d'expertise pour le rachat de diamants solitaires et brillants à Strasbourg. Évaluation selon les 4C et cotation en direct du Rapaport Diamond Report.",
+  title: "Rachat Diamant Strasbourg (Place Kléber) : Rapaport & GIA | Expertise & Achat Immédiat | " + site.name,
+  description: "Cabinet gemmologique spécialisé dans l'expertise et le rachat immédiat de diamants certifiés (GIA, HRD, SSEF, IGI), solitaires et brillants d'exception à Strasbourg (Place Kléber).",
   alternates: {
     canonical: `${site.url}/rachat-diamant-strasbourg`,
   },
 };
 
+const criteria = {'title': "Critères d'Évaluation du Diamant", 'items': [{'label': 'Poids en Carats (Carat)', 'text': 'Pesée de haute précision au centième de carat sur balance hydrostatique homologuée.'}, {'label': 'Couleur (Color)', 'text': 'Gradation chromatique comparative avec pierres étalons de D à Z et expertise des Fancy Colors.'}, {'label': 'Pureté (Clarity)', 'text': 'Examen minutieux sous grossissement 10x de FL/IF aux inclusions visibles.'}, {'label': 'Qualité de Taille (Cut)', 'text': 'Analyse des proportions, de la symétrie et du poli (Triple Excellent).'}, {'label': 'Certificat International', 'text': "Plus-value reconnue pour les rapports d'expertise GIA, HRD ou SSEF."}]};
+const process = {'title': 'Procédure de Rachat en 4 Étapes', 'steps': [{'title': '1. Premier Contact', 'body': "Transmettez-nous les certificats ou photos et convenez d'un rendez-vous privé à Strasbourg."}, {'title': '2. Examen Gemmologique', 'body': 'Analyse visuelle et spectroscopique réalisée sous vos yeux en salon ou à domicile.'}, {'title': '3. Offre Ferme', 'body': "Proposition d'achat immédiat basée sur le cours mondial Rapaport du jour."}, {'title': '4. Virement Immédiat', 'body': "Signature de l'acte de vente et virement bancaire instantané sur votre compte."}]};
+const faqs = [{'q': 'Achetez-vous des diamants sans certificat à Strasbourg ?', 'a': 'Parfaitement. Nos gemmologues diplômés GIA établissent la gradation complète des 4C directement dans notre laboratoire de Strasbourg (Place Kléber).'}, {'q': "Comment est calculée l'offre de rachat ?", 'a': "L'offre s'appuie directement sur le cours mondial officiel du Rapaport Diamond Report et sur la demande du marché international de la haute joaillerie."}, {'q': 'Pouvez-vous vous déplacer dans mon hôtel ou chalet ?', 'a': 'Oui, nous organisons des rendez-vous discrets en hôtels de luxe (Hôtel Régent Petite France, Maison Rouge, Sofitel) ou dans les chalets privés de Strasbourg et des Alsace & Grand Est.'}];
+const related = [{'label': 'Haute Joaillerie Signée', 'href': '/rachat-haute-joaillerie-signee-strasbourg'}, {'label': 'Bijoux Anciens & Époque', 'href': '/rachat-bijoux-anciens-strasbourg'}, {'label': 'Montres de Prestige', 'href': '/rachat-montres-luxe-strasbourg'}, {'label': 'Strasbourg (Place Kléber)', 'href': '/rachat-bijoux-strasbourg-1850'}];
+const gallery = [
+  'https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80',
+  'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=800&q=80',
+  'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80',
+  'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=80'
+];
+
 export default function Page() {
   return (
     <ServicePage
       slug="rachat-diamant-strasbourg"
-      h1="Rachat de Diamants Certifiés à Strasbourg"
-      subtitle="Expertise gemmologique indépendante, cotations officielles Rapaport en temps réel et paiement immédiat par virement bancaire Place Kléber."
-      image="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1200&q=80"
-      benefits={[
-        {"title": "Cotation Rapaport en Direct", "desc": "Calcul immédiat de la valeur marchande selon la grille officielle internationale du diamant brut et taillé."}, {"title": "Laboratoire de Réfractométrie & UV", "desc": "Contrôle d'authenticité, détection de fluorescence et examen des inclusions à la loupe binoculaire 10x à 40x."}, {"title": "Diamants Montés ou Libres", "desc": "Évaluation précise de solitaires sur bague, pendentifs ou pierres descellées de 0.50 ct à plus de 10 carats."}, {"title": "Règlement Immédiat", "desc": "Virement bancaire instantané immédiat après acceptation de notre offre d'achat ferme."}
-      ]}
-      sections={[
-        {"title": "Le Marché du Diamant d'Investissement à Strasbourg", "body": "Au carrefour de la France, de l'Allemagne et de la Suisse, Strasbourg bénéficie d'une tradition centenaire de transactions précieuses. Nos experts diplômés appliquent les critères scientifiques les plus rigoureux reconnus par les grands laboratoires internationaux (GIA, HRD, IGI, SSEF)."}, {"title": "Méthode des 4C Appliquée sous vos Yeux", "body": "Carat (poids exact au centième), Color (nuance de D à Z), Clarity (pureté et localisation des inclusions) et Cut (qualité de la taille, symétrie et poli). Chaque paramètre vous est expliqué en toute transparence."}
-      ]}
-      faqs={[
-        {"q": "Achetez-vous les diamants sans certificat ?", "a": "Oui. Notre équipement de laboratoire permet de certifier les 4C de votre pierre directement sur place lors du rendez-vous."}, {"q": "Comment fixez-vous le prix de rachat ?", "a": "Le prix est directement indexé sur la grille hebdomadaire du Rapaport Diamond Report, corrigé de la surcote ou décote du marché international."}
-      ]}
+      hero={{
+        eyebrow: "Gemmologie Officielle · Place Kléber & Salons Privés Strasbourg",
+        title: "Rachat de Diamants à Strasbourg : Cours Rapaport & Certificats GIA",
+        titleHighlight: "Cotation Officielle Rapaport en Direct",
+        intro: "Cabinet gemmologique indépendant spécialisé dans l'expertise et le rachat immédiat de diamants taillés ou bruts, solitaires d'exception et diamants de couleur Fancy à Strasbourg. Virement instantané.",
+        image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1600&q=80",
+        imageAlt: "Expertise et rachat de diamants certifiés GIA à Strasbourg (Place Kléber)",
+      }}
+      category="Diamants Certifiés"
+      defaultItemType="Diamant"
+      defaultSubject="Estimation Diamant Certifié à Strasbourg"
+      introBlock={{
+        eyebrow: "Gemmologie Officielle · Place Kléber & Salons Privés Strasbourg",
+        title: "Expertise Scientifique et Rachat Immédiat de Diamants à Strasbourg",
+        paragraphs: ["Dans nos salons privés de Strasbourg (Place Kléber) ou directement dans la quiétude de votre chalet, nos gemmologues diplômés réalisent l'expertise de vos diamants à l'aide d'instruments optiques de précision : microscopie stéréoscopique, réfractomètre et lampe UV.", "Qu'il s'agisse d'un diamant rond taille brillant moderne, de tailles fantaisie (émeraude, poire, coussin, radiant, ovale, princesse) ou de diamants anciens taillés à la mine, nous appliquons rigoureusement la grille officielle du Rapaport Diamond Report.", 'Nous garantissons un rachat direct sans intermédiaires ni commissions de vente aux enchères, avec règlement immédiat par virement bancaire sécurisé en Euros.'],
+      }}
+      criteria={criteria}
+      process={process}
+      gallery={gallery}
+      faqs={faqs}
+      related={related}
     />
   );
 }
